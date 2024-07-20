@@ -1,0 +1,6 @@
+name: kill_tracker
+version: '${version}'
+main: comfortable_andy.killtracker.KillTrackerMain
+api-version: '1.21'
+softdepend:
+  - PlaceholderAPI
