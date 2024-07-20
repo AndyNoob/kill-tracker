@@ -34,7 +34,6 @@ public class KillTrackerExpansion extends PlaceholderExpansion {
     @Override
     public @Nullable String onPlaceholderRequest(Player player, @NotNull String params) {
         final String[] split = params.split("_");
-        System.out.println("hi");
         if (split[0].equalsIgnoreCase("kills")) {
             if (split.length == 1)
                 return main.getKills(player).getKills().size() + "";
