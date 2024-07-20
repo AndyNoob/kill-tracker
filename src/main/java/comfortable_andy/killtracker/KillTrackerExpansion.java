@@ -40,6 +40,12 @@ public class KillTrackerExpansion extends PlaceholderExpansion {
             else {
                 return main.getKills(player).killTimestamps(split[1]).size() + "";
             }
+        } else if (split[0].equals("killedby") && split.length > 1) {
+            try {
+                return main.getKills(split[1]).killTimestamps(player.getUniqueId()).size() + "";
+            } catch (Exception e) {
+                return null;
+            }
         }
         return null;
     }

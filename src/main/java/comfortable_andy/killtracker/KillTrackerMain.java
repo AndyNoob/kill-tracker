@@ -92,6 +92,11 @@ public final class KillTrackerMain extends JavaPlugin implements Listener {
         return kills.computeIfAbsent(id, k -> new KillsData(id));
     }
 
+    public KillsData getKills(String str) {
+        UUID id = UUID.fromString(str);
+        return kills.computeIfAbsent(id, k -> new KillsData(id));
+    }
+
     @EventHandler(priority = EventPriority.MONITOR)
     public void onDeath(EntityDeathEvent event) {
         Player killer = event.getEntity().getKiller();
